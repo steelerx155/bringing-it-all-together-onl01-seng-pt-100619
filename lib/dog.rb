@@ -70,7 +70,7 @@ class Dog
       dog = self.create(name: name, breed: breed)
     end
     elsif
-    dog.find_or_create_by(name: name)
+    dog.find_or_create_by(name: name, breed: breed)
     dog
   end
       
