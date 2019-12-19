@@ -40,7 +40,7 @@ class Dog
      
      def self.create(name:, breed:)
        self.create_table
-       
+       self.id
     end   
   
 end
