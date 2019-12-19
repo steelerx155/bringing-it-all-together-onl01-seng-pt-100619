@@ -69,6 +69,8 @@ class Dog
     else
       dog = self.create(name: name, breed: breed)
     end
+    elsif
+    dog.find_or_create_by(name: name)
     dog
   end
       
