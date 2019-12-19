@@ -39,5 +39,8 @@ class Dog
   end
      
      def self.create(name:, breed:)
+       self.create_table
+       self.save
+    end   
   
 end
