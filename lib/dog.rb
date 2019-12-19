@@ -83,10 +83,11 @@ class Dog
     breed = row[2]
     self.new(id: id, name: name, breed: breed)
   end
-      
-       sql = <<-SQL
+  
+    def self.find_by_name(name)  
+      sql = <<-SQL
       SELECT *
-      FROM students
+      FROM dogs
       WHERE name = ?
       LIMIT 1
     SQL
@@ -94,4 +95,5 @@ class Dog
     DB[:conn].execute(sql,name).map do |row|
       self.new_from_db(row)
     end.first
-end  
+   end  
+end   
