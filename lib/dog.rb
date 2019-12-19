@@ -40,12 +40,9 @@ class Dog
      
      def self.create(name:, breed:)
        dog = Dog.new(name: name, breed: breed)
-       sql = <<-SQL
-       
-       self.create_table(name, breed)
-       self.id
-       SQL
-       DB[:conn].execute(sql)
-    end   
+       dog.save
+       dog
+    end
+      
   
 end
