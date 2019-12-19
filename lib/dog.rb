@@ -51,9 +51,10 @@ class Dog
     self.new(id: id, name: name, breed: breed)
   end
   
-  def self.find_by_id
-    sql - <<-SQL
-    SELECT * FROM dogs ORDER BY id
+  def self.find_by_id(id)
+    sql = <<-SQL
+    SELECT * FROM dogs WHERE id = ?
+    LIMIT 1
     SQL
     DB[:conn].execute(sql, self.name, self.breed)
   end
