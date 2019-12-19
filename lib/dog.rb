@@ -44,7 +44,7 @@ class Dog
        self.create_table(name, breed)
        self.id
        SQL
-       DB[:conn].execute(sql, self.name, self.breed)
+       DB[:conn].execute(sql)
     end   
   
 end
