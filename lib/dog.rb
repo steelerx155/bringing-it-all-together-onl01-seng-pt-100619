@@ -56,4 +56,5 @@ class Dog
     SELECT * FROM dogs ORDER BY id
     SQL
     DB[:conn].execute(sql, self.name, self.breed)
-end
+  end
+end  
